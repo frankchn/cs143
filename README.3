@@ -1,0 +1,88 @@
+                        CS143 Programming Assignment 3
+                              Semantic Analysis
+                        ==============================
+
+General Design
+==============
+
+I extended all the classes in the abstract syntax tree with a check function
+taking a Hashtable<Decl*> containing all the declarations that are present in
+the current scope.
+
+The hashtable is chosen to represent scope because it supports multiple key/
+value pairs and returning the most recently inserted ones, which is appropriate
+to contain scoped declarations, as later declarations in an inner scope 
+overrides outer declarations.
+
+I create a scope of the current hashtable whenever a new scope is created so as
+to reduce removal bugs at the end of a scope when walking through the AST.
+Unfortunately, this may have the effect of increasing memory leaks if I do not
+clean up (by calling delete) diligently.
+
+The program will begin by calling Check() on the Program object, which will
+then recursively check each individual items within the declaration, and those
+items will recursively check each item below. This ensures that the entire
+AST is parsed and type-checked correctly.
+
+For declarations and statements, the Check() function either does not return
+at all or returns NULL. As declarations and statements are independent of other
+statements or declarations, they do not need to return whether they are type
+checked correctly.
+
+For Expressions, each expression would return a Type* demonstrating the actual
+type of the expression as evaluated. This is to facilitate the correct type-
+checking for expressions, as some expressions depend on the type of
+sub-expressions in order for a correct type-checking.
+
+I implemented scope name validity separately from the Decls by checking at
+the start of each scope all the names of the declarations before doing a 
+in-order walk of the tree. In this way, extensions such as L[] L; can be
+accepted by the semantic analyzer.
+
+I determine the type of each Decl by exploiting C++'s dynamic_cast and RTTI 
+information. I then use these information in the type checker (i.e. if there
+are two interfaces, we can just compare the names of the interface. If it is a
+interface and a class or are both classes, then we need to walk up the hierarchy
+of classes to determine whether the types are compatible.
+
+Changes Since Checkpoint
+------------------------
+
+I have also refactored some code to take better advantage of C++'s support for
+virtual functions instead of using the RTTI information and dynamic_cast'ing,
+as suggested by Keith. Specifically, I have rewritten class compatibility checking
+and the type equivalence checker to take better advantage of virtual functions 
+and dynamic run-time dispatching.
+
+Extra Credit
+============
+
+Interface Method Inheritance
+----------------------------
+
+I have implemented a mechanism such that the following:
+
+class A { void myMethod() { /* something */ } }
+class B extends A implements C { }
+interface C { void myMethod(); }
+
+will be an accepted by semantic analysis. In general, so long as the interfaces
+specified by the methods are implemented at some point within the inheritance
+chain, then the interface will be accepted as implemented.
+
+Type and Variable Name Scoping
+------------------------------
+
+void a() {
+    L[] L; 
+    L = NewArray(10, L);
+}
+
+class L { }
+
+Support for Postfix and Switch Statements
+-----------------------------------------
+
+Support for the postfix operators ++ and --, and the switch case statements
+are also present within the system. I have also made test cases for the ++, 
+-- and switch statements in the samples/ folder.

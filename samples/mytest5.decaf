@@ -1,0 +1,48 @@
+class A implements F {
+  int x;
+  void modify_x() {
+    Print(x,"\n");
+    x = 10;
+    Print(x,"\n");
+  }
+}
+
+class B extends A implements G {
+  int y;
+  void modify_both() {
+    Print(x," ",y,"\n");
+    x = 42;
+    y = 35;
+    Print(x," ",y,"\n");
+  }
+}
+
+interface F {
+  void modify_x();
+}
+
+interface G {
+  void modify_both();
+}
+
+void main() {
+   A a;
+   B b;
+   F f;
+   G g;
+
+   b = new B;
+   f = b;
+   g = b;
+   
+   f.modify_x();
+   g.modify_both();
+   f.modify_x();
+
+  
+   b = new B;
+   a = b;
+   a.modify_x();
+   b.modify_both(); 
+}
+

@@ -1,0 +1,25 @@
+int change (int amount) {
+  int a;
+  int b;
+  int c;
+
+  if(amount == 4 || amount == 5) return 1;
+  if(amount < 4) return amount;
+
+  a = change(amount - 1);
+  b = change(amount - 4);
+  c = change(amount - 5);
+
+  if(a < b && a < c) return a + 1;
+  if(b < c) return b + 1;
+  return c + 1;
+}
+
+void main() {
+  int amount;
+  int result;
+
+  amount = ReadInteger();
+  result = change(amount);
+  Print(result);
+}

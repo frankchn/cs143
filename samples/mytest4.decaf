@@ -1,0 +1,38 @@
+class A implements F {
+  int a_int;
+  void a_fn() { Print("A_FN from A\n"); }
+} 
+
+class B extends A { 
+  bool b_bool;
+  void a_fn() { Print("A_FN from B\n"); }
+  void b_fn() { Print("B_FN from B\n"); }
+}
+
+interface F {
+    void a_fn();
+}
+
+
+void main() {
+   A a;
+   B b;
+   F f;
+   
+   a = new A;
+   b = new B;
+   
+   a.a_fn();
+   b.b_fn();
+   
+   a = b;
+   a.a_fn();
+   b = new B;
+   f = b;
+   f.a_fn();
+   
+   a = new A;
+   f = a;
+   f.a_fn();
+}
+

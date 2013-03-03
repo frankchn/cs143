@@ -1,0 +1,18 @@
+void main() {
+  int x;
+  int y;
+  int a;
+  int b;
+  int c;
+  x = 1;
+  y = 2;
+  a = x+y;
+  Print(a);
+  b = x+y;
+  Print(b);
+  x = 3;
+  c = x+y;
+  Print(c);
+  return;
+}
+

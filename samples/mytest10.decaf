@@ -1,0 +1,24 @@
+class A {
+  int myint;
+  void modifymyint(int x) {
+    myint = x;
+  }
+  void printmyint() {
+    Print(myint,"\n");
+  }
+} 
+
+A returnClassA() {
+  A a;
+  a = new A;
+  a.modifymyint(42);
+  return a;
+}
+
+void main() {
+  A a;
+  a = returnClassA();
+  a.printmyint();
+  a.modifymyint(137);
+  a.printmyint();
+}

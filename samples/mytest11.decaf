@@ -1,0 +1,22 @@
+class A {
+  int myint;
+  void modmyint(int x) {
+    myint = x;
+  }
+  void printmyint() {
+    Print(myint," ");
+  }
+}
+
+void main() {
+  A[] a;
+  int i;
+  a = NewArray(10, A);
+  for(i = 0; i < a.length(); i++) {
+    a[i] = new A;
+    a[i].modmyint(i*2);
+  }
+  for(i = 0; i < a.length(); i++) {
+    a[i].printmyint();
+  }
+}

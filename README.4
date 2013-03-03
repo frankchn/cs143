@@ -1,0 +1,83 @@
+                     CS143 Assignment 4 Design Document
+                     ==================================
+                     Frank Chen (frankchn@stanford.edu)
+
+I extended the decl, expr, stmt and type classes and created an Emit method for
+each of them. The Emit class returns a Location object for the relevant classes
+where the location class is actually being used. I do a depth-first transversal
+of the abstract syntax tree and emit the code into CodeGenerator class before
+doing final output.
+
+I also extended the semantic checker to leave 'clues' the various nodes (where
+relevant, such as FieldAccess and Call to mark what exactly it is referring
+to) so that the Emit functions can be made simpler. The semantic checker must
+be turned on for the compiler to work correctly as I have integrated the clue-
+leaving into semantic analyzer.
+
+Array Format:
+-------------
+
+---> Size    (+00) (Pointer points to size)
+     Index 0 (+04)
+     Index 1 (+08)
+     Index 2 (+12)
+
+In array accesses, I offset the index by one when I return the value of the 
+actual array. The zero-th index contains the size of the array for array
+bounds checking at run-time.
+
+Class Memory Layout:
+--------------------
+  - Class VTABLE
+  - Inherited Interface 1 VTable
+  - Inherited Interface 2 VTable
+  - ...
+  - Current Interface 1 VTable
+  - Current Interface 2 VTable
+  - ...
+  - Inherited Variable 1
+  - Inherited Variable 2
+  - Inherited Variable 3
+  - ...
+  - My Variable 1
+  - My Variable 2
+  - ...
+  
+VTable Memory Layout:
+---------------------
+  - Offset Function (called before each method call for offset)
+  - Function 1 (Defined by parent class, but may be overridden)
+  - Function 2 (Defined by parent class, but may be overridden)
+  - Function 3 (Current class definition definition)
+  - Function 4 (Current class definition definition)
+
+Extra Credit
+============
+
+I have implemented the following extesnions to the compiler:
+
+ - Postfix Expressions
+   - for(i = 0; i < 10; i++) works as expected
+ - Switch Case Statements
+   - Expression based case statements. The expression is evaluated each time 
+     the switch statement is run.
+ - Interfaces
+   - Interfaces don't have to be implemented at the current level
+   - Interfaces can be inherited from parents
+   - Casting down to interface does not mean loss of original functionality
+     - classA a; interfaceI i; i = a; i and a will both operate on the same 
+       object with no loss of functionality.
+   - Recursive Interface
+     - Implementation detail as A extends F implements C doesn't know that F
+       may also implement D.
+     - The offsets will be wrong and the class memory will be clobbered if this
+       problem isn't fixed.
+     - Solution: regenerate all member functions at each level with new  offsets
+       to compensate and ensure correctness
+ - Optimization
+   - * To turn on optimizations, make clean; make opt=1 *
+   - see samples/optimize_*.decaf for test cases
+   - All samples currently pass the tests
+   - Basic Block Identification
+   - Common Subexpression Elimination
+   - Copy Propagation

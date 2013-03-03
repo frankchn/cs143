@@ -1,0 +1,44 @@
+int main() {
+
+int a;
+
+switch(a--) {
+   case 1:
+     a = 5 + a--;
+     break;
+   case 2:
+     a--;
+   case 3:
+     {
+        int a;
+        a = 10;
+        b = 5;
+        {
+           double a;
+           a = 7;
+           a = 8.0;
+           {
+              A a;
+              a.a();
+              a.b();
+           }
+        }
+     }
+     break;
+     break;
+   default:
+
+}
+
+
+}
+
+
+class A {
+  int c;
+  void a() {
+    c = 0;
+    this.c = 1;
+  }
+
+}

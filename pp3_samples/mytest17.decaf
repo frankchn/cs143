@@ -1,0 +1,23 @@
+int main() {
+  error A;
+  error[] B;
+  A = null;
+  B = null;
+  Z(A);
+  Z(B);
+  Z(B[0]);
+  Z(C);
+  Z(error);
+}
+
+int Z(error B) {
+
+}
+
+int Y(int C) {
+
+}
+
+class error {
+
+}

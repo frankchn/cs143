@@ -1,0 +1,30 @@
+
+*** Error line 2.
+  this.a = 1;
+  ^^^^
+*** 'this' is only valid within class scope
+
+
+*** Error line 11.
+    n();
+    ^
+*** No declaration found for function 'n'
+
+
+*** Error line 12.
+    this.n();
+         ^
+*** A has no such field 'n'
+
+
+*** Error line 14.
+    y = 1;
+    ^
+*** No declaration found for variable 'y'
+
+
+*** Error line 15.
+    this.y = 1;
+         ^
+*** A has no such field 'y'
+

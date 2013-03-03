@@ -1,0 +1,18 @@
+
+*** Error line 4.
+    A.B();
+      ^
+*** A has no such field 'B'
+
+
+*** Error line 5.
+    A.a = 5;
+      ^
+*** A field 'a' only accessible within class scope
+
+
+*** Error line 6.
+    A.b = 5;
+      ^
+*** A has no such field 'b'
+

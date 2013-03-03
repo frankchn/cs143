@@ -1,0 +1,24 @@
+interface Cat {
+  void meow();
+}
+
+class Garfield implements Cat {
+  int totalSleep;
+  void meow() {
+    totalSleep = totalSleep - 1;
+    Print(totalSleep,"\n");
+  }
+  void reset(int x) {
+    totalSleep = x;
+  }
+}
+
+void main() {
+  Garfield g;
+  Cat c;
+  
+  g = new Garfield;
+  g.reset(10);
+  g.meow();
+}
+

@@ -1,0 +1,6 @@
+
+*** Error line 1.
+class A extends A {  }
+      ^
+*** The inheritance hierarchy of this class forms a loop.
+

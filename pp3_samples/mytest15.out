@@ -1,0 +1,36 @@
+
+*** Error line 7.
+  A(null, b);
+    ^^^^
+*** Incompatible argument 1: null given, int[] expected
+
+
+*** Error line 8.
+  A(a, null);
+       ^^^^
+*** Incompatible argument 2: null given, B[] expected
+
+
+*** Error line 9.
+  A(b, a);
+    ^
+*** Incompatible argument 1: B[] given, int[] expected
+
+
+*** Error line 10.
+  A(null, null);
+    ^^^^
+*** Incompatible argument 1: null given, int[] expected
+
+
+*** Error line 11.
+  A();
+  ^
+*** Function 'A' expects 2 arguments but 0 given
+
+
+*** Error line 12.
+  A(null, null, null);
+  ^
+*** Function 'A' expects 2 arguments but 3 given
+

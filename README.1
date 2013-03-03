@@ -1,0 +1,43 @@
+                  --------------------------------------
+                  |   CS143 Programming Assignment 1   |
+                  | Lexical Analysis - Design Document |
+                  --------------------------------------
+
+Author: Frank Chen <frankchn@stanford.edu>
+
+General Overview
+================
+
+I've used simple regular expressions for most of the choices I have made in 
+writing the lexical analyzer in flex.
+
+I used DoBeforeEachAction and helper functions to count the number of new lines
+and characters that is matched and updates a pair of global variables to count
+the number of lines parsed and characters parsed in the certain line. 
+
+Identifiers are placed at the top, before whitespace and other catch all regexps
+to assist in correctly tie-breaking the 
+
+I also simplified structure by packing everything into the regular expression
+instead of carrying state around. For instance, I packed multi-line C-style
+comments such as /* */ into one single regular expression. By maximal munch,
+the C-style comment will be matched to its maximal extent. As we do not allow
+any nested comments, this can be done fairly easily with rudimentary regular
+expressions.
+
+
+Specific Design Details
+=======================
+
+I matched all characters in a string except a \n and " using a regular
+expression. 
+
+I also handled unclosed multi-line comments and unclosed string literals 
+specially For multi-line comments, I matched all characters except the literal
+"*/" for unclosed multi-line comments and all characters except " and \n for
+unclosed strings and printed out error messages as noted. 
+
+I also handled floats with and without exponents in a separate manner, to
+prevent things like 12.34E from being parsed as a float - which would be an 
+error. If tehre is an E or e after a float, then the exponents and optionally
+a sign must follow.

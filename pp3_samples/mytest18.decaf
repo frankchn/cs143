@@ -1,0 +1,17 @@
+void a() {
+  this.a = 1;
+}
+
+class A {
+  int x;
+  int m() {
+    this.x = 0;
+    this.m();
+    m();
+    n();
+    this.n();
+    x = 1;
+    y = 1;
+    this.y = 1;
+  }
+}

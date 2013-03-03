@@ -1,0 +1,19 @@
+void x() {
+    C c;
+    X x;
+    Y y;
+    U u;
+    x = c;
+    y = c;
+    u = c;
+    x.X_f();
+}
+
+class A implements X { int gg; void X_f() { } }
+class B extends A implements Y { void X_f() { } int Y_f(Y lorem) { } }
+class C extends B implements Z { int C_vi; void X_f() { C zzz; C_vi = 0; this.C_vi = 1; gg = 0; xx = 0; Print(Y_f(zzz)); } }
+
+interface X { void X_f(); }
+interface Y { }
+interface Z { }
+interface U { } 

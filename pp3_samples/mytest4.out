@@ -1,0 +1,6 @@
+
+*** Error line 10.
+    G = NewArray(10, L[]);
+      ^
+*** Incompatible operands: G[][] = L[][]
+

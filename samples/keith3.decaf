@@ -1,0 +1,23 @@
+class A {
+  int a;
+  void fn1() { a = 0; Print("TEST!", a, "\n"); }
+}
+
+interface I {
+  void fn1();
+}
+
+class B extends A implements I {
+  
+}
+
+void main() {
+  I zz;
+  I I;
+
+  I = new B;
+  I.fn1();
+
+  zz = new B;
+  zz.fn1();
+}

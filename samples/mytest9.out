@@ -1,0 +1,20 @@
+SPIM Version 7.4 of January 1, 2009
+Copyright 1990-2004 by James R. Larus (larus@cs.wisc.edu).
+All Rights Reserved.
+See the file README for a full copyright notice.
+Loaded: /usr/class/cs143/bin/exceptions.s
+Case B
+Case B+1
+Case B+2
+Case B+2
+Case B+3
+Case B+4
+Case B+5
+Case B+4
+Case B+5
+Case B+5
+Default
+Default
+Case B*2
+Default
+Default

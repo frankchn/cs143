@@ -1,0 +1,72 @@
+class A implements F, G {
+  int my_a;
+  void modify_a(int x) { my_a = x; }
+  void print_a() { Print(my_a," "); }
+}
+
+class B extends A {
+  int my_b;
+  void modify_b(int x) { my_b = x; }
+  void print_b() { Print(my_b," "); }
+}
+
+class C extends B implements H {
+  int my_c;
+  void modify_c(int x) { my_c = x; }
+  void modify_a(int x) { my_a = x; Print("YOWZA! "); }
+  void print_c() { Print(my_c," "); }
+}
+
+interface F {
+  void modify_a(int x);
+}
+
+interface G {
+  void print_a();
+}
+
+interface H {
+  void modify_c(int x);
+  void print_c();
+}
+
+void main() {
+  A a;
+  B b;
+  C c;
+
+  F f;
+  G g;
+  H h;
+
+  a = new A;
+  b = new B;
+  c = new C;
+
+  f = a;
+  g = a;
+
+  f.modify_a(42);
+  g.print_a();
+
+  f = b;
+  g = b;
+  b.modify_b(137);
+  f.modify_a(42);
+  g.print_a();
+  b.print_b();
+
+  f = c;
+  g = c;
+  h = c;
+  a = c;
+  b = c;
+
+  a.modify_a(1337);
+  b.modify_b(3333);
+  c.modify_c(1241);
+  g.print_a();
+  b.print_b();
+  h.print_c();
+
+}

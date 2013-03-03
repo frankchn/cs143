@@ -1,0 +1,12 @@
+
+*** Error line 1.
+class A extends B {
+      ^
+*** The inheritance hierarchy of this class forms a loop.
+
+
+*** Error line 5.
+class B extends A {
+      ^
+*** The inheritance hierarchy of this class forms a loop.
+

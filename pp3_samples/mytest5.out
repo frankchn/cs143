@@ -1,0 +1,18 @@
+
+*** Error line 6.
+    B = C;
+      ^
+*** Incompatible operands: C = B
+
+
+*** Error line 27.
+      lorem = NewArray(10, A);
+            ^
+*** Incompatible operands: A[][] = A[]
+
+
+*** Error line 48.
+        ipsum = lorem;
+              ^
+*** Incompatible operands: C = AA
+

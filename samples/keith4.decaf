@@ -1,0 +1,10 @@
+void Modify(string s) {
+s = "hello";
+}
+
+void main() {
+string s;
+s = "world";
+Modify(s);
+Print(s);
+}

@@ -1,0 +1,15 @@
+class A extends A {
+
+}
+
+class B extends C {
+
+}
+
+class C extends B {
+
+}
+
+void main() {
+
+}

@@ -1,0 +1,64 @@
+void main() {
+    B C;
+    C B;
+    
+    C = B;
+    B = C;
+}
+
+class A {
+    int a;
+    A z(int a) { }
+}
+
+class B extends A {
+    int b;
+        B BB() { }
+}
+
+class C extends B implements AA {
+    int c;
+    A z(int a) { }
+    void BA() { }
+
+    C BC(A a) {
+      A[][] lorem;
+      
+      lorem = NewArray(10, A);
+    
+      for(;true;) {
+        break;
+      }
+    }
+    
+    B ZZ() {
+        AA abc;
+        C def;
+        
+        AA lorem;
+        C ipsum;
+        
+        if(abc == def) {
+        
+        } else {
+        
+        }
+        
+        lorem = ipsum;
+        ipsum = lorem;
+        
+        return def;
+    }
+}
+
+interface AA {
+  void BA();
+  B BB();
+  C BC(A a);
+}
+
+class YY implements AA {
+  void BA() { }
+  B BB() { }
+  C BC(A a) { }
+}

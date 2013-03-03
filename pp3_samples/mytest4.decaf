@@ -1,0 +1,14 @@
+void a() {
+    int[][] a;
+    L[] L;
+    G[][] G;
+    
+    a = NewArray(10, int[]);
+    L = NewArray(10, L);
+    G = NewArray(10, G[]);
+    L = NewArray(10, G);
+    G = NewArray(10, L[]);
+}
+
+class L { }
+class G extends L { }

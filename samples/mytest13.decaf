@@ -1,0 +1,15 @@
+class C {
+   void foo() { Print("Hello!\n"); }
+}
+
+C a;
+
+void init_a() {
+  a = new C;
+}
+
+int main() {
+  int C;
+  init_a();
+  a.foo();
+}

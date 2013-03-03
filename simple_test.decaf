@@ -1,0 +1,257 @@
+void main() {
+    int i;
+    int a;
+    int b;
+    int c;
+    
+    a = 1;
+    b = 2;
+    c = 3;
+    
+    a = b + c;
+    
+    for(i = 0; i < 100000; i++) {
+        a = b + c;
+        a = b + c;
+        a = b + c;
+    }
+}
+
+/*void main() {
+  int a;
+  int b;
+  int c;
+  int d;
+  int e;
+  int f;
+  
+  a = 42;
+  b = 137;
+
+  c = a + b;
+  d = a + b;
+
+  Print(c);
+  Print(d);
+
+  a = 84;
+  c = a + b;
+
+  Print(c);
+  
+  d = 84;
+  e = d;
+  f = e;
+  
+  Print(d);
+  Print(e);
+  Print(f);
+  
+  e = 166;
+  f = e;
+  
+  Print(f);
+  Print(e);
+  
+  c = e + f;
+  d = e + f;
+  f = e + f;
+  
+  Print(f);
+  
+  f = e + f;
+  
+  Print(c);
+  Print(d);
+  Print(f);
+
+}*/
+/* class A {
+  int x;
+  void a() {
+    x = 0;
+    b();
+    Print(x);
+  }
+  void b() {
+    x = 1;
+  }
+}
+
+void main() {
+  A a;
+  a = new A;
+  a.a();
+}*/
+
+/*void main() {
+  int[] a;
+  int i;
+  i = 0;
+  a = NewArray(10, int);
+  for(i = 0; i < a.length(); i++) {
+    a[i] = i;
+    Print(i, " ");
+    a[i]++;
+    Print(a[i]," ");
+  }
+}*/
+
+/*interface Cat {
+  void meow();
+}
+
+class Garfield implements Cat {
+  int totalSleep;
+  void meow() {
+    totalSleep = totalSleep - 1;
+    Print(totalSleep,"\n");
+  }
+  void reset(int x) {
+    totalSleep = x;
+  }
+}
+
+void main() {
+  Garfield g;
+  Cat c;
+  
+  g = new Garfield;
+  g.reset(10);
+  g.meow();
+}*/
+/*
+void main() {
+  B b;
+  b = new B;
+  b.b_fn();
+}
+
+class A {
+  int int_a;
+  void a_fn() {
+  }
+}
+
+class B extends A {
+  int int_b;
+  void b_fn() {
+  }
+}*/
+/*
+class A implements F {
+  int x;
+  void modify_x() {
+    Print(x,"\n");
+    x = 10;
+    Print(x,"\n");
+  }
+}
+
+class B extends A implements G {
+  int y;
+  void modify_both() {
+    Print(x," ",y,"\n");
+    x = 42;
+    y = 35;
+    Print(x," ",y,"\n");
+  }
+}
+
+interface F {
+  void modify_x();
+}
+
+interface G {
+  void modify_both();
+}
+
+void main() {
+   A a;
+   B b;
+   F f;
+   G g;
+
+   b = new B;
+   f = b;
+   g = b;
+   
+   f.modify_x();
+   g.modify_both();
+   f.modify_x();
+
+  
+   b = new B;
+   a = b;
+   a.modify_x();
+   b.modify_both(); 
+}
+*/
+
+/*class C extends B implements H { int c_fn() { Print("C:c_fn\n"); } int h_fn() { Print("C:h_fn\n"); } int f_fn() { Print("C:f_fn\n"); } }
+class B extends A { int b_fn() { Print("B:b_fn\n"); } }
+class A implements F, G { int a_fn() { Print("A:a_fn\n"); } int f_fn() { Print("A:f_fn\n"); } int g_fn() { Print("A:g_fn\n"); } }
+
+interface F { int f_fn(); }
+interface G { int g_fn(); }
+interface H { int h_fn(); }
+
+void main() {
+    A a;
+    B b;
+    C c;
+    
+    F f;
+    G g;
+    H h;
+    
+    a = new A;
+    b = new B;
+    c = new C;
+    
+    h = c;
+    h.h_fn();
+    f = c;
+    f.f_fn();
+    f = a;
+    f.f_fn();
+}*/
+/*
+class A implements F {
+  int a_int;
+  void a_fn() { Print("A_FN from A\n"); }
+} 
+
+class B extends A { 
+  bool b_bool;
+  void a_fn() { Print("A_FN from B\n"); }
+  void b_fn() { Print("B_FN from B\n"); }
+}
+
+interface F {
+    void a_fn();
+}
+
+
+void main() {
+   A a;
+   B b;
+   F f;
+   
+   a = new A;
+   b = new B;
+   
+   a.a_fn();
+   b.b_fn();
+   
+   a = b;
+   a.a_fn();
+   b = new B;
+   f = b;
+   f.a_fn();
+   
+   a = new A;
+   f = a;
+   f.a_fn();
+}
+*/

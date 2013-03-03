@@ -1,0 +1,19 @@
+void main() {
+  int a;
+  int b;
+  b = 1;
+
+  while((a = ReadInteger()) != 0) {
+    switch(a) {
+      case b: Print("Case B\n"); break;
+      case b+1: Print("Case B+1\n");
+      case b+2: Print("Case B+2\n"); break;
+      case b+3: Print("Case B+3\n");
+      case b+4: Print("Case B+4\n");
+      case b+5: Print("Case B+5\n"); break;
+      case b*9: Print("Case B*2\n");
+      default: Print("Default\n");
+    }
+  }
+}
+

@@ -1,0 +1,29 @@
+class C extends B implements H { int c_fn() { Print("C:c_fn\n"); } int h_fn() { Print("C:h_fn\n"); } int f_fn() { Print("C:f_fn\n"); } }
+class B extends A { int b_fn() { Print("B:b_fn\n"); } }
+class A implements F, G { int a_fn() { Print("A:a_fn\n"); } int f_fn() { Print("A:f_fn\n"); } int g_fn() { Print("A:g_fn\n"); } }
+
+interface F { int f_fn(); }
+interface G { int g_fn(); }
+interface H { int h_fn(); }
+
+void main() {
+    A a;
+    B b;
+    C c;
+    
+    F f;
+    G g;
+    H h;
+    
+    a = new A;
+    b = new B;
+    c = new C;
+    
+    h = c;
+    h.h_fn();
+    f = c;
+    f.f_fn();
+    f = a;
+    f.f_fn();
+}
+

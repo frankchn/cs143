@@ -1,0 +1,11 @@
+class Derived extends Base implements Interface {
+}
+
+class Base {
+int a() {}
+}
+
+interface Interface {
+double a();
+}
+

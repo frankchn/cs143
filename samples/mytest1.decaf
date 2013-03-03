@@ -1,0 +1,18 @@
+class A {
+  int x;
+  void a() {
+    x = 0;
+    b();
+    Print(x,"\n");
+  }
+  void b() {
+    x = 1;
+  }
+}
+
+void main() {
+  A a;
+  a = new A;
+  a.a();
+}
+

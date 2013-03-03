@@ -1,0 +1,36 @@
+
+*** Error line 1.
+class A extends B {
+      ^
+*** The inheritance hierarchy of this class forms a loop.
+
+
+*** Error line 5.
+class B extends A {
+      ^
+*** The inheritance hierarchy of this class forms a loop.
+
+
+*** Error line 9.
+class C extends A {
+      ^
+*** The inheritance hierarchy of this class forms a loop.
+
+
+*** Error line 13.
+class D extends C {
+      ^
+*** The inheritance hierarchy of this class forms a loop.
+
+
+*** Error line 17.
+class E extends B {
+      ^
+*** The inheritance hierarchy of this class forms a loop.
+
+
+*** Error line 21.
+class F extends A {
+      ^
+*** The inheritance hierarchy of this class forms a loop.
+

@@ -1,0 +1,15 @@
+void modify (int[] a) {
+    int i;
+    for (i = 0; i < a.length(); i = i + 1)
+        a[i] = i;
+}
+int main() {
+    int[] a;
+    int i;
+    a = NewArray(5, int);
+    for (i = 0; i < a.length(); i = i + 1)
+        a[i] = i + 10;
+    modify(a);
+    for (i = 0; i < a.length(); i = i + 1)
+        Print(a[i]);
+}

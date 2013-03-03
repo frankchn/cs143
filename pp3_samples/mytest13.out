@@ -1,0 +1,6 @@
+
+*** Error line 5.
+int a() {}
+    ^
+*** Method 'a' must match inherited type signature
+

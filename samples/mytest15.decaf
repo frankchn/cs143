@@ -1,0 +1,25 @@
+class A {
+  int a;
+  void fn(int a) {
+    Print(a," ",this.a,"\n");
+    fn3(a + this.a);
+    this.fn3(this.a + a);
+  }
+  void fn2() {
+    a = 137;
+  }
+  void fn3(int a) {
+    Print("!", a, "\n");
+  }
+}
+
+void fn3(int a) {
+  Print("+", a, "\n");
+}
+
+void main() {
+  A a;
+  a = new A;
+  a.fn2();
+  a.fn(42);
+}

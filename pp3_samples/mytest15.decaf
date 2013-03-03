@@ -1,0 +1,22 @@
+int main() {
+
+  int[] a;
+  B[] b;
+
+  A(a, b);
+  A(null, b);
+  A(a, null);
+  A(b, a);
+  A(null, null);
+  A();
+  A(null, null, null);
+
+}
+
+void A(int[] a, B[] b) {
+
+}
+
+class B {
+
+}

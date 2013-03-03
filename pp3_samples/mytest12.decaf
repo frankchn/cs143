@@ -1,0 +1,18 @@
+void main() {
+ B b;
+ A a;
+ A c;
+
+ a = b;
+ a = c;
+ c = a;
+
+}
+
+interface A {
+
+}
+
+class B implements A {
+
+}

@@ -1,0 +1,14 @@
+void main2() {
+    A A;
+    A.A();
+    A.B();
+    A.a = 5;
+    A.b = 5;
+}
+
+class A {
+  int a;
+  void A() {
+    a = 5;
+  }
+}

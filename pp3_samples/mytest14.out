@@ -1,0 +1,6 @@
+
+*** Error line 4.
+  MyFunc = 5;
+  ^^^^^^
+*** No declaration found for variable 'MyFunc'
+

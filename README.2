@@ -1,0 +1,70 @@
+                  -------------------------------------
+                  |   CS143 Programming Assignment 2  |
+                  | Syntax Analysis - Design Document |
+                  -------------------------------------
+
+Pitfalls
+========
+
+Specifying optional arguments
+-----------------------------
+
+b(, a, b, );
+double a(, double b) { }
+
+The specification of the optional argument list must be done carefully so that
+syntax such as the ones above are not accidentially accepted by the syntax
+analyzer.
+
+Switch Statement Definition
+===========================
+
+I have used the following switch statement definitions in order to define the
+switch statements in order to conform to the example and behavior of the switch
+statement in other C-style languages.
+
+SwitchStmt ::= T_Switch '(' Expr ')' '{' (CaseStatement)+ (DefaultStatement)? '}'
+
+CaseStatements ::= T_Case T_Integer ':' (StmtList)*
+
+DefaultStatement ::= T_Default ':' (StmtList)*
+
+I defined three keywords - "switch", "case" and "default" in the scanner and
+modified the parser to accept the switch statement and associated contexts.
+
+Error Recovery
+==============
+
+I have tried to detect and recover these types of errors in my syntax analyzer.
+The error messages they output might be different (with additional material)
+compared to the reference errors as given in the samples directory). 
+
+void error() {
+  int a = 5;
+}
+
+I would ignore the assignment of a value during the initialization and but
+declare the variable (and putting it in the AST anyway).
+
+void test(double b) {
+   some junk here
+}
+
+If anything within a statement block cannot be parsed properly, I would skip
+the statement block and move on.
+
+void test() {
+  switch(1) {
+     Print(1,2,3);
+  }
+}
+
+void test() {
+  switch(1) {
+     default:
+  }
+}
+
+Errors of syntax use within the switch statement is detected and the entire 
+switch statement is ignored before continuing to parse the next statements.
+

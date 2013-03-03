@@ -1,0 +1,149 @@
+SPIM Version 7.4 of January 1, 2009
+Copyright 1990-2004 by James R. Larus (larus@cs.wisc.edu).
+All Rights Reserved.
+See the file README for a full copyright notice.
+Loaded: /usr/class/cs143/bin/exceptions.s
+Enter a number: 327 is odd, so we 3n + 1: 982
+982 is even, so we halve it: 491
+491 is odd, so we 3n + 1: 1474
+1474 is even, so we halve it: 737
+737 is odd, so we 3n + 1: 2212
+2212 is even, so we halve it: 1106
+1106 is even, so we halve it: 553
+553 is odd, so we 3n + 1: 1660
+1660 is even, so we halve it: 830
+830 is even, so we halve it: 415
+415 is odd, so we 3n + 1: 1246
+1246 is even, so we halve it: 623
+623 is odd, so we 3n + 1: 1870
+1870 is even, so we halve it: 935
+935 is odd, so we 3n + 1: 2806
+2806 is even, so we halve it: 1403
+1403 is odd, so we 3n + 1: 4210
+4210 is even, so we halve it: 2105
+2105 is odd, so we 3n + 1: 6316
+6316 is even, so we halve it: 3158
+3158 is even, so we halve it: 1579
+1579 is odd, so we 3n + 1: 4738
+4738 is even, so we halve it: 2369
+2369 is odd, so we 3n + 1: 7108
+7108 is even, so we halve it: 3554
+3554 is even, so we halve it: 1777
+1777 is odd, so we 3n + 1: 5332
+5332 is even, so we halve it: 2666
+2666 is even, so we halve it: 1333
+1333 is odd, so we 3n + 1: 4000
+4000 is even, so we halve it: 2000
+2000 is even, so we halve it: 1000
+1000 is even, so we halve it: 500
+500 is even, so we halve it: 250
+250 is even, so we halve it: 125
+125 is odd, so we 3n + 1: 376
+376 is even, so we halve it: 188
+188 is even, so we halve it: 94
+94 is even, so we halve it: 47
+47 is odd, so we 3n + 1: 142
+142 is even, so we halve it: 71
+71 is odd, so we 3n + 1: 214
+214 is even, so we halve it: 107
+107 is odd, so we 3n + 1: 322
+322 is even, so we halve it: 161
+161 is odd, so we 3n + 1: 484
+484 is even, so we halve it: 242
+242 is even, so we halve it: 121
+121 is odd, so we 3n + 1: 364
+364 is even, so we halve it: 182
+182 is even, so we halve it: 91
+91 is odd, so we 3n + 1: 274
+274 is even, so we halve it: 137
+137 is odd, so we 3n + 1: 412
+412 is even, so we halve it: 206
+206 is even, so we halve it: 103
+103 is odd, so we 3n + 1: 310
+310 is even, so we halve it: 155
+155 is odd, so we 3n + 1: 466
+466 is even, so we halve it: 233
+233 is odd, so we 3n + 1: 700
+700 is even, so we halve it: 350
+350 is even, so we halve it: 175
+175 is odd, so we 3n + 1: 526
+526 is even, so we halve it: 263
+263 is odd, so we 3n + 1: 790
+790 is even, so we halve it: 395
+395 is odd, so we 3n + 1: 1186
+1186 is even, so we halve it: 593
+593 is odd, so we 3n + 1: 1780
+1780 is even, so we halve it: 890
+890 is even, so we halve it: 445
+445 is odd, so we 3n + 1: 1336
+1336 is even, so we halve it: 668
+668 is even, so we halve it: 334
+334 is even, so we halve it: 167
+167 is odd, so we 3n + 1: 502
+502 is even, so we halve it: 251
+251 is odd, so we 3n + 1: 754
+754 is even, so we halve it: 377
+377 is odd, so we 3n + 1: 1132
+1132 is even, so we halve it: 566
+566 is even, so we halve it: 283
+283 is odd, so we 3n + 1: 850
+850 is even, so we halve it: 425
+425 is odd, so we 3n + 1: 1276
+1276 is even, so we halve it: 638
+638 is even, so we halve it: 319
+319 is odd, so we 3n + 1: 958
+958 is even, so we halve it: 479
+479 is odd, so we 3n + 1: 1438
+1438 is even, so we halve it: 719
+719 is odd, so we 3n + 1: 2158
+2158 is even, so we halve it: 1079
+1079 is odd, so we 3n + 1: 3238
+3238 is even, so we halve it: 1619
+1619 is odd, so we 3n + 1: 4858
+4858 is even, so we halve it: 2429
+2429 is odd, so we 3n + 1: 7288
+7288 is even, so we halve it: 3644
+3644 is even, so we halve it: 1822
+1822 is even, so we halve it: 911
+911 is odd, so we 3n + 1: 2734
+2734 is even, so we halve it: 1367
+1367 is odd, so we 3n + 1: 4102
+4102 is even, so we halve it: 2051
+2051 is odd, so we 3n + 1: 6154
+6154 is even, so we halve it: 3077
+3077 is odd, so we 3n + 1: 9232
+9232 is even, so we halve it: 4616
+4616 is even, so we halve it: 2308
+2308 is even, so we halve it: 1154
+1154 is even, so we halve it: 577
+577 is odd, so we 3n + 1: 1732
+1732 is even, so we halve it: 866
+866 is even, so we halve it: 433
+433 is odd, so we 3n + 1: 1300
+1300 is even, so we halve it: 650
+650 is even, so we halve it: 325
+325 is odd, so we 3n + 1: 976
+976 is even, so we halve it: 488
+488 is even, so we halve it: 244
+244 is even, so we halve it: 122
+122 is even, so we halve it: 61
+61 is odd, so we 3n + 1: 184
+184 is even, so we halve it: 92
+92 is even, so we halve it: 46
+46 is even, so we halve it: 23
+23 is odd, so we 3n + 1: 70
+70 is even, so we halve it: 35
+35 is odd, so we 3n + 1: 106
+106 is even, so we halve it: 53
+53 is odd, so we 3n + 1: 160
+160 is even, so we halve it: 80
+80 is even, so we halve it: 40
+40 is even, so we halve it: 20
+20 is even, so we halve it: 10
+10 is even, so we halve it: 5
+5 is odd, so we 3n + 1: 16
+16 is even, so we halve it: 8
+8 is even, so we halve it: 4
+4 is even, so we halve it: 2
+2 is even, so we halve it: 1
+It took 143 step(s) to reach 1.

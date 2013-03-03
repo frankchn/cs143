@@ -1,0 +1,18 @@
+
+*** Error line 15.
+        b = 5;
+        ^
+*** No declaration found for variable 'b'
+
+
+*** Error line 18.
+           a = 7;
+             ^
+*** Incompatible operands: double = int
+
+
+*** Error line 23.
+              a.b();
+                ^
+*** A has no such field 'b'
+

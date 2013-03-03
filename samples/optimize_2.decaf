@@ -1,0 +1,50 @@
+void main() {
+  int a;
+  int b;
+  int c;
+  int d;
+  int e;
+  int f;
+  
+  a = 42;
+  b = 137;
+
+  c = a + b;
+  d = a + b;
+
+  Print(c);
+  Print(d);
+
+  a = 84;
+  c = a + b;
+
+  Print(c);
+  
+  d = 84;
+  e = d;
+  f = e;
+  
+  Print(d);
+  Print(e);
+  Print(f);
+  
+  e = 166;
+  f = e;
+  
+  Print(f);
+  Print(e);
+  
+  c = e + f;
+  d = e + f;
+  f = e + f;
+  
+  Print(f);
+  
+  f = e + f;
+  
+  Print(c);
+  Print(d);
+  Print(f);
+
+}
+

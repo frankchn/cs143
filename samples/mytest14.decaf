@@ -1,0 +1,16 @@
+class A {
+  int a;
+  void fn(int a) {
+    Print(a," ",this.a,"\n");
+  }
+  void fn2() {
+    a = 137;
+  }
+}
+
+void main() {
+  A a;
+  a = new A;
+  a.fn2();
+  a.fn(42);
+}

@@ -1,0 +1,19 @@
+int main() {
+  B z;
+
+  int[] a;
+  B[] b;
+  B[][] c;
+
+  z = null;
+
+  a = null;
+  b = null;
+  b[0] = null;
+  c = null;
+  c[0] = null;
+  c[0][0] = null;
+}
+
+
+class B { }

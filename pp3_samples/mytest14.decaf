@@ -1,0 +1,5 @@
+void MyFunc() {}
+
+int main() {
+  MyFunc = 5;
+}

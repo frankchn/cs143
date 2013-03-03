@@ -1,0 +1,12 @@
+
+*** Error line 8.
+    u = c;
+      ^
+*** Incompatible operands: U = C
+
+
+*** Error line 14.
+class C extends B implements Z { int C_vi; void X_f() { C zzz; C_vi = 0; this.C_vi = 1; gg = 0; xx = 0; Print(Y_f(zzz)); } }
+                                                                                                ^^
+*** No declaration found for variable 'xx'
+
